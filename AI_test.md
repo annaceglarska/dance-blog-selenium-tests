@@ -1,6 +1,3 @@
-Oczywiście! Poniżej znajdziesz prosty przykładowy test w JavaScript z wykorzystaniem Selenium WebDriver. Ten test otwiera stronę Google, wyszukuje hasło „Selenium” i sprawdza, czy tytuł strony zawiera słowo „Selenium”.
-
-```javascript
 const { Builder, By, Key, until } = require('selenium-webdriver');
 
 (async function exampleTest() {
@@ -34,9 +31,3 @@ const { Builder, By, Key, until } = require('selenium-webdriver');
     await driver.quit();
   }
 })();
-```
-
-Aby uruchomić ten test, pamiętaj o:
-
-- Zainstalowaniu `selenium-webdriver` (`npm install selenium-webdriver`)
-- Posiadaniu odpowiedniego WebDrivera (np. chromedriver) zgodnego z Twoją przeglądarką Chrome i dostępnym w PATH.
