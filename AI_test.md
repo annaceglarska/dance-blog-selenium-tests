@@ -1,1 +1,42 @@
-T2N6eXdpxZtjaWUhIFBvbmnFvGVqIHpuYWpkemllc3ogcHJvc3R5IHByenlrxYJhZG93eSB0ZXN0IHcgSmF2YVNjcmlwdCB6IHd5a29yenlzdGFuaWVtIFNlbGVuaXVtIFdlYkRyaXZlci4gVGVuIHRlc3Qgb3R3aWVyYSBzdHJvbsSZIEdvb2dsZSwgd3lzenVrdWplIGhhc8WCbyDigJ5TZWxlbml1beKAnSBpIHNwcmF3ZHphLCBjenkgdHl0dcWCIHN0cm9ueSB6YXdpZXJhIHPFgm93byDigJ5TZWxlbml1beKAnS4KCmBgYGphdmFzY3JpcHQKY29uc3QgeyBCdWlsZGVyLCBCeSwgS2V5LCB1bnRpbCB9ID0gcmVxdWlyZSgnc2VsZW5pdW0td2ViZHJpdmVyJyk7CgooYXN5bmMgZnVuY3Rpb24gZXhhbXBsZVRlc3QoKSB7CiAgLy8gVXJ1Y2hhbWlhbXkgcHJ6ZWdsxIVkYXJrxJkgQ2hyb21lCiAgbGV0IGRyaXZlciA9IGF3YWl0IG5ldyBCdWlsZGVyKCkuZm9yQnJvd3NlcignY2hyb21lJykuYnVpbGQoKTsKCiAgdHJ5IHsKICAgIC8vIFByemVjaG9kemlteSBuYSBzdHJvbsSZIEdvb2dsZQogICAgYXdhaXQgZHJpdmVyLmdldCgnaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbScpOwoKICAgIC8vIFpuYWpkdWplbXkgcG9sZSB3eXN6dWtpd2FuaWEsIHdwaXN1amVteSAiU2VsZW5pdW0iIGkgemF0d2llcmR6YW15IEVudGVyZW0KICAgIGF3YWl0IGRyaXZlci5maW5kRWxlbWVudChCeS5uYW1lKCdxJykpLnNlbmRLZXlzKCdTZWxlbml1bScsIEtleS5SRVRVUk4pOwoKICAgIC8vIEN6ZWthbXksIGHFvCB0eXR1xYIgc3Ryb255IHphY3puaWUgc2nEmSBzxYJvd2VtICJTZWxlbml1bSIKICAgIGF3YWl0IGRyaXZlci53YWl0KHVudGlsLnRpdGxlQ29udGFpbnMoJ1NlbGVuaXVtJyksIDUwMDApOwoKICAgIC8vIFBvYmllcmFteSB0eXR1xYIgc3Ryb255IGkgd3lwaXN1amVteSBnbwogICAgbGV0IHRpdGxlID0gYXdhaXQgZHJpdmVyLmdldFRpdGxlKCk7CiAgICBjb25zb2xlLmxvZyhgVHl0dcWCIHN0cm9ueSB0bzogJHt0aXRsZX1gKTsKCiAgICBpZiAodGl0bGUudG9Mb3dlckNhc2UoKS5pbmNsdWRlcygnc2VsZW5pdW0nKSkgewogICAgICBjb25zb2xlLmxvZygnVGVzdCBwYXNzZWQ6IFR5dHXFgiB6YXdpZXJhIHPFgm93byAiU2VsZW5pdW0iLicpOwogICAgfSBlbHNlIHsKICAgICAgY29uc29sZS5sb2coJ1Rlc3QgZmFpbGVkOiBUeXR1xYIgbmllIHphd2llcmEgc8WCb3dhICJTZWxlbml1bSIuJyk7CiAgICB9CgogIH0gY2F0Y2ggKGVycm9yKSB7CiAgICBjb25zb2xlLmVycm9yKCdXeXN0xIVwacWCIGLFgsSFZDonLCBlcnJvcik7CiAgfSBmaW5hbGx5IHsKICAgIC8vIFphbXlrYW15IHByemVnbMSFZGFya8SZCiAgICBhd2FpdCBkcml2ZXIucXVpdCgpOwogIH0KfSkoKTsKYGBgCgpBYnkgdXJ1Y2hvbWnEhyB0ZW4gdGVzdCwgcGFtacSZdGFqIG86CgotIFphaW5zdGFsb3dhbml1IGBzZWxlbml1bS13ZWJkcml2ZXJgIChgbnBtIGluc3RhbGwgc2VsZW5pdW0td2ViZHJpdmVyYCkKLSBQb3NpYWRhbml1IG9kcG93aWVkbmllZ28gV2ViRHJpdmVyYSAobnAuIGNocm9tZWRyaXZlcikgemdvZG5lZ28geiBUd29qxIUgcHJ6ZWdsxIVkYXJrxIUgQ2hyb21lIGkgZG9zdMSZcG55bSB3IFBBVEgu
+Oczywiście! Poniżej znajdziesz prosty przykładowy test w JavaScript z wykorzystaniem Selenium WebDriver. Ten test otwiera stronę Google, wyszukuje hasło „Selenium” i sprawdza, czy tytuł strony zawiera słowo „Selenium”.
+
+```javascript
+const { Builder, By, Key, until } = require('selenium-webdriver');
+
+(async function exampleTest() {
+  // Uruchamiamy przeglądarkę Chrome
+  let driver = await new Builder().forBrowser('chrome').build();
+
+  try {
+    // Przechodzimy na stronę Google
+    await driver.get('https://www.google.com');
+
+    // Znajdujemy pole wyszukiwania, wpisujemy "Selenium" i zatwierdzamy Enterem
+    await driver.findElement(By.name('q')).sendKeys('Selenium', Key.RETURN);
+
+    // Czekamy, aż tytuł strony zacznie się słowem "Selenium"
+    await driver.wait(until.titleContains('Selenium'), 5000);
+
+    // Pobieramy tytuł strony i wypisujemy go
+    let title = await driver.getTitle();
+    console.log(`Tytuł strony to: ${title}`);
+
+    if (title.toLowerCase().includes('selenium')) {
+      console.log('Test passed: Tytuł zawiera słowo "Selenium".');
+    } else {
+      console.log('Test failed: Tytuł nie zawiera słowa "Selenium".');
+    }
+
+  } catch (error) {
+    console.error('Wystąpił błąd:', error);
+  } finally {
+    // Zamykamy przeglądarkę
+    await driver.quit();
+  }
+})();
+```
+
+Aby uruchomić ten test, pamiętaj o:
+
+- Zainstalowaniu `selenium-webdriver` (`npm install selenium-webdriver`)
+- Posiadaniu odpowiedniego WebDrivera (np. chromedriver) zgodnego z Twoją przeglądarką Chrome i dostępnym w PATH.
