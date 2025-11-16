@@ -1,1 +1,1 @@
-AbypodaprognozpogodynajutropotrzebujinformacjiolokalizacjidlaktrejchceszpoznapogodMoeszpodaminazwmiastalubregionu
+Aby poda prognoz pogody na jutro potrzebuj informacji o lokalizacji dla ktrej chcesz pozna pogod Moesz poda mi nazw miasta lub regionu
